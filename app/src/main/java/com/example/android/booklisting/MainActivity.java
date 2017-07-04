@@ -37,8 +37,7 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<L
     private static final int BOOK_LOADER_ID = 0;
 
     /** URL for earthquake data from the dataset */
-    private static String BOOKS_REQUEST_URL =
-            "https://www.googleapis.com/books/v1/volumes?q=android&maxResults=30";
+    private static String BOOKS_REQUEST_URL;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
