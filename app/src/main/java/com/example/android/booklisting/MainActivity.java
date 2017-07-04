@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<L
 
     /** URL for earthquake data from the USGS dataset */
     private static String BOOKS_REQUEST_URL =
-            "https://www.googleapis.com/books/v1/volumes?q=subject:android&maxResults=20";
+            "https://www.googleapis.com/books/v1/volumes?q=android&maxResults=20";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,7 +68,13 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<L
         boolean isConnected = activeNetwork != null &&
                 activeNetwork.isConnectedOrConnecting();
         if (isConnected) {
+          // Get a reference to the LoaderManager, in order to interact with loaders.
+            LoaderManager loaderManager = getLoaderManager();
 
+            // Initialize the loader. Pass in the int ID constant defined above and pass in null for
+            // the bundle. Pass in this activity for the LoaderCallbacks parameter (which is valid
+            // because this activity implements the LoaderCallbacks interface).
+            loaderManager.initLoader(EARTHQUAKE_LOADER_ID, null, this);
         } else {
             bar.setVisibility(View.GONE);
             mEmptyView.setText(R.string.no_connection);
