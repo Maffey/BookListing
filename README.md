@@ -1,3 +1,3 @@
 # BookListing
 
-Repository created to share a problem on Udacity forums.
+First project that was hevily connected with networking.
