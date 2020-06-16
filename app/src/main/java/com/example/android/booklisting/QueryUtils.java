@@ -195,7 +195,6 @@ public final class QueryUtils {
         // Return the list of books
         return books;
     }
-// TODO: FINISH THIS
     public static String fetchUserInput (String userInput) {
         String baseUrl = "https://www.googleapis.com/books/v1/volumes?q=";
         String freshUrl = baseUrl + userInput;

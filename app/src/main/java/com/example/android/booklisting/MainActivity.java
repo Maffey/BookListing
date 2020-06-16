@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<L
         bar = (ProgressBar) findViewById(R.id.loading_view);
         bar.setVisibility(View.INVISIBLE);
 
-        //Create a new adapter that takes an empty list of earthquakes as input
+        //Create a new adapter that takes an empty list of books as input
         mAdapter = new BookAdapter(this, new ArrayList<Book>());
 
         // Set the adapter on the {@link ListView}
@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<L
         bar.setVisibility(View.INVISIBLE);
 
         mEmptyView.setText(R.string.empty_view);
-        // Clear the adapter of previous earthquake data
+        // Clear the adapter of previous books data
         mAdapter.clear();
 
         // If there is a valid list of {@link Book}s, then add them to the adapter's

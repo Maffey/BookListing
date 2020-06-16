@@ -29,7 +29,7 @@ public class BookLoader extends AsyncTaskLoader<List<Book>> {
     @Override
     public List<Book> loadInBackground() {
         // Don't perform the request if there are no URLs, or the first URL is null
-        if (mUrl.length() < 1 || mUrl == null) {
+        if (mUrl.length() < 1) {
             return null;
         }
         return QueryUtils.fetchBookData(mUrl);
